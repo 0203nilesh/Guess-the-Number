@@ -1,0 +1,11 @@
+.rule-list{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin: 10px auto;
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Crete Round', serif;
+    row-gap: 2rem;
+}
