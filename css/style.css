@@ -13,29 +13,41 @@ h1, h2{
     background-color: #B4ECE3;
     border-radius: 20px;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;    
+    justify-content: center;
+    align-items: center;    
     flex-wrap: wrap;
+    position: relative;
     /* row-gap: rem; */
+}
+.container::before{
+    content: "";
+    background: url('../img/guessing.jfif') no-repeat center/contain;
+    position: absolute;
+    background-position: 100% 0% 0% 100%;
+    bottom: 0;
+    right: 5%;
+    opacity: 1;
+    width: 250px;
+    height:200px;
+    z-index: 2;
 }
 
 .Game_heading{
-    column-span: 1/4;
     width: 100%;
     background-color: rgb(79, 71, 71);
+    text-align: center;
     color: white;
 }
 .instruction{
+    column-span: 1/4;
     display: flex;
     flex-direction: column;
-    justify-content: right;
-    align-items: flex-end;
-    width: 55%;
+    width: 100%;
     /* border: 2px solid red; */
 }
 .instruction ul{
-    text-align: right;
-    width: 80%;
+    text-align: left;
+    width: 100%;
 }
 .instruction li{
     font-family: 'Play', sans-serif;
@@ -43,6 +55,7 @@ h1, h2{
 }
 .instruction h3{
     font-size: 25px;
+    text-align: left;
 }
 
 .player-1{
@@ -100,3 +113,17 @@ h1, h2{
     font-size: 25px;
 }
 
+@media screen and (max-width: 773px) and (min-width: 510px) {
+        .container::before{
+            top: 10%;
+            right: 38%;
+            height: 100px;
+            width: 100px;
+        }
+}
+@media screen and (max-width: 510px) and (min-width: 100px) {
+        .container::before{
+            content: none;
+        }
+        
+}
